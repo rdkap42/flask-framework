@@ -37,9 +37,9 @@ def stockresults():
     lastmonth = today - dateutil.relativedelta.relativedelta(months=1)
     data_lastmonth = data[data['Date'] > lastmonth]
 
-    name = re.search("(^.*\))", dataset_df.ix['name', 0]).group(1)
+    #name = re.search("(^.*\))", dataset_df.ix['name', 0]).group(1)
 
-    p = figure(title=name, plot_width=600, plot_height=400,
+    p = figure(title="Stock Plot", plot_width=600, plot_height=400,
                x_axis_type="datetime",
                x_range=(lastmonth, today),
                x_axis_label="Date",
